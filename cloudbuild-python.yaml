@@ -1,0 +1,24 @@
+# https://cloud.google.com/build/docs/building/build-python
+# https://cloud.google.com/artifact-registry/docs/python/store-python
+# https://packaging.python.org/en/latest/tutorials/packaging-projects/
+# https://www.freecodecamp.org/news/build-your-first-python-package/
+# gcloud config set project slsa-tooling
+
+steps:
+  - name: python
+    entrypoint: python
+    args: ["-m", "pip", "install", "--upgrade", "pip"]
+  - name: python
+    entrypoint: python
+    args: ["-m", "pip", "install", "build", "--user"]  
+  - name: python
+    entrypoint: python
+    args: ["-m", "build"]
+
+artifacts:
+  python_packages:
+  - repository: "https://us-west2-python.pkg.dev/$PROJECT_ID/example-python-repo"
+    paths: ["dist/*"]
+
+options:
+  requestedVerifyOption: VERIFIED

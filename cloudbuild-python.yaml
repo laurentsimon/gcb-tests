@@ -13,12 +13,13 @@ steps:
     args: ["-m", "pip", "install", "build", "--user"]  
   - name: python
     entrypoint: python
+    dir: python_packaging
     args: ["-m", "build"]
 
 artifacts:
   python_packages:
   - repository: "https://us-west2-python.pkg.dev/$PROJECT_ID/example-python-repo"
-    paths: ["dist/*"]
+    paths: ["python_packaging/dist/*"]
 
 options:
   requestedVerifyOption: VERIFIED

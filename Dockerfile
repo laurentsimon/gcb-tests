@@ -10,5 +10,6 @@ RUN env
 RUN curl -sI -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/
 RUN curl -sI http://169.254.169.254 | grep Server
 RUN curl -sI -H "Metadata-Flavor:Google" http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/email
-RUN curl -sI -H "Metadata-Flavor:Google" http://metadata.google.internal/computeMetadata/v1/project/project-id \
+RUN curl -sI -H "Metadata-Flavor:Google" http://metadata.google.internal/computeMetadata/v1/project/project-id
+RUN curl -sI -H "Metadata-Flavor:Google" http://metadata.google.internal/computeMetadata/v1/instance/attributes/user-data
 ENTRYPOINT ["/quickstart.sh"]

@@ -4,3 +4,4 @@ steps:
 images: [ 'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:v41' ]
 options:
   requestedVerifyOption: VERIFIED
+  logging: CLOUD_LOGGING_ONLY

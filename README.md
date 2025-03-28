@@ -22,3 +22,4 @@ $ curl http://169.254.169.254/computeMetadata/v1/project/project-id \
 9efd0213678c10f935-tp
 
 
+build & run https://docs.docker.com/get-started/workshop/02_our_app/

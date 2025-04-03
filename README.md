@@ -23,3 +23,5 @@ $ curl http://169.254.169.254/computeMetadata/v1/project/project-id \
 
 
 build & run https://docs.docker.com/get-started/workshop/02_our_app/
+
+To enable Metadata server for role, see https://cloud.google.com/compute/docs/metadata/querying-metadata
